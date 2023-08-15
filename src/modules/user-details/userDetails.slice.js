@@ -115,7 +115,7 @@ export const userDetailsSlice = createSlice({
             })
             .addCase(addUserAsync.fulfilled, (state, action) => {
                 state.createStatus = "succeeded";
-                state.userList.push(action.payload)
+                state.userList.push(...action.payload)
             })
             .addCase(addUserAsync.rejected, (state) => {
                 state.createStatus = "failed";
