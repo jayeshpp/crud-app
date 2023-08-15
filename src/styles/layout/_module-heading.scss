@@ -1,0 +1,11 @@
+.module-heading {
+    padding-bottom: $space-16;
+    display: flex;
+
+    .mh-left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}

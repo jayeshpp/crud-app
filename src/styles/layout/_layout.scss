@@ -1,0 +1,29 @@
+body {
+    background-color: $color-black-200;
+    min-height: 100vh;
+}
+
+#root, .app-layout {
+    min-height: 100vh;
+}
+
+.app-layout {
+    display: flex;
+    height: 100%;
+    .app-main {
+        flex: 1;
+        main {
+            padding: $space-24;
+            .module-card {
+                background-color: $color-white;
+                padding: $space-16;
+            }
+        }
+    }
+}
+
+.app-container {
+    background-color: white;
+    width: 1440px;
+    margin: auto;
+}
