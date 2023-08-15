@@ -1,4 +1,4 @@
-# HAUD - User details app
+# CRUD - User details app
 
 ## Dev setup
 
