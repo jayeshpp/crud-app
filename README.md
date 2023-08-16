@@ -1,5 +1,7 @@
 # CRUD - User details app
 
+[Demo](https://main--stupendous-cranachan-9b524c.netlify.app/)
+
 ## Dev setup
 
 ```
