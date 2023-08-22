@@ -38,4 +38,25 @@ describe('services', () => {
 
     expect(result).toEqual(responseData);
   });
+
+  it('should delete a user', async () => {
+    const userId = 2;
+
+    mockAxiosInstance.onDelete(`/users/${userId}`).reply(204, userId);
+
+    const result = await services.deleteUser(userId);
+    expect(result).toEqual({status: 200, data: userId});
+  });
+
+  it('should update a user', async () => {
+    const userId = 1;
+    const payload = { name: 'Updated User' };
+    const responseData = {status: 200, data: {id: userId, ...singleUserData}};
+
+    mockAxiosInstance.onPatch(`/users/${userId}`).reply(200, responseData);
+
+    const result = await services.updateUser(payload, userId);
+
+    expect(result).toEqual(responseData);
+  });
 });

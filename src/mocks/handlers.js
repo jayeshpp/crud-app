@@ -18,11 +18,11 @@ export const handlers = [
 
   rest.delete(`${MSW_BASE_URL}/\\(default\\)/documents/users/:id`, async (req, res, ctx) => {
     const { id } = req.params;
-    return res(ctx.status(id));
+    return res(ctx.status(200), ctx.json(parseInt(id)));
   }),
 
   rest.patch(`${MSW_BASE_URL}/\\(default\\)/documents/users/:id`, async (req, res, ctx) => {
     const { id } = req.params;
-    return res(ctx.json({id, singleUserData}));
+    return res(ctx.status(200), ctx.json({id: parseInt(id), ...singleUserData}));
   }),
 ];
