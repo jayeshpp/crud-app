@@ -1,7 +1,5 @@
 # CRUD - User details app
 
-[Demo](https://main--stupendous-cranachan-9b524c.netlify.app/)
-
 ## Dev setup
 
 ```
@@ -12,6 +10,7 @@
 ```
 
 ## Tech stack
+- firebase
 - React (vite)
 - Reduxt toolkit
 - Formik + Yup
